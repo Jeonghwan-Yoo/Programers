@@ -37,17 +37,3 @@ int solution(string s)
     }
     return answer;
 }
-
-int main()
-{
-    freopen("in.txt", "r", stdin);
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    
-    string in;
-    getline(cin, in);
-    int ret = solution(in);
-    cout << ret;
-
-    return 0;
-}
