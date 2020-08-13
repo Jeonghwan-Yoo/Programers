@@ -39,7 +39,7 @@ int solution(int n, vector<int> weak, vector<int> dist) {
             if (flag == true)
                 break;
 
-            next_permutation(group.begin(), group.end());
+            prev_permutation(group.begin(), group.end());
         }
         if (flag == true)
             break;
