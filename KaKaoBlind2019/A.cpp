@@ -18,27 +18,23 @@ vector<string> solution(vector<string> record) {
     for (int i = 0; i < (int)record.size(); ++i)
     {
         stringstream ss(record[i]);
-        string uid, name;
-        if (record[i][0] == 'E')
+        string type, uid, name;
+        ss >> type;
+        ss >> uid;
+        if (type[0] == 'E')
         {
-            ss >> uid;
-            ss >> uid;
             ss >> name;
             uidToName[uid] = name;
             uidSet.emplace_back(uid);
             typeSet.emplace_back(0);
         }
-        else if (record[i][0] == 'L')
+        else if (type[0] == 'L')
         {
-            ss >> uid;
-            ss >> uid;
             uidSet.emplace_back(uid);
             typeSet.emplace_back(1);
         }
         else
         {
-            ss >> uid;
-            ss >> uid;
             ss >> name;
             uidToName[uid] = name;
         }
